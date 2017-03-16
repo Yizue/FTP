@@ -1,0 +1,57 @@
+Readme File for FTP Client and Server
+
+Required:
+    Python 3
+
+On command line:
+    python3 ftp_server.py
+        Optional Program Arguments:
+            -h                      Get usage of ftp_server.py
+            -port portnum           Set FTP control port number
+            -dpr dp_low-dp_high     Set data port range for FTP data port numbers
+            -config configfile      Set configuration file for ftp_server.py
+            -userdb userfile        Set users file for ftp_server.py
+            -log logfile            Set log file for ftp_server.py
+            -max max_conns          Set the maximum connections for the server
+            -v                      Displays the version number of ftp_server.py
+            -info                   Displays general description of ftp_server.py
+
+
+On command line after the ftp server is running:
+    python3 ftp_client.py
+        Optional Program Arguments:
+            -h                      Get usage of ftp_server.py
+            -host hostname          Set the hostname of the FTP server
+            -u username             Set the username for the FTP client
+            -w password             Set the password for the FTP client
+            -fp portnum             Set FTP control port number
+            -dpr dp_low-dp_high     Set data port range for FTP data port numbers
+            -c configfile           Set configuration file for ftp_client.py
+            -P                      Sets data connections to passive mode
+            -A                      Sets data connections to active mode
+            -t testfile             Sets the test file for ftp_client.py, also runs commands on test file
+            -T                      Runs the default test file instead of prompting user for commands
+            -L logfile              Set log file for ftp_client.py
+            -ALL                    Display both command line message and write to log file
+            -ONLY                   Only write to log file
+            -v                      Displays the version number of ftp_client.py
+            -info                   Displays general description of ftp_client.py
+	
+    NOTE: I/O REDIRECTION OF STDIN IS SUPPORTED
+
+    On ftp client: Enter ftp client commands when prompted.
+    Use the ? command to see all of the ftp_client commands.
+
+To suspend, resume, or close the ftp server, on command line:
+    python3 ftp_server_run.py
+        Optional Program Arguments:
+            -h                      Get usage of ftp_server_run.py
+            -config configfile      Set configuration file for ftp_server_run.py
+            -info                   Displays general description of ftp_server_run.py
+
+    Note that if passing a configuration file to ftp_server_run.py,
+    the same files must also be passed to ftp_server.py
+
+    Enter:  <S> to suspend the server
+            <R> to resume the server
+            <C> to close the server

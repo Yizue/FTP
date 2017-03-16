@@ -1,0 +1,6 @@
+# Username Password Type
+Admin adm Admin
+user1 us1 User
+user2 us2 User
+user3 us3 User
+user4 us4 NotAllowed

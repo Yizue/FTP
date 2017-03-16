@@ -1,0 +1,16 @@
+# Rainy Day Scenario 1: Tests sending and retrieval of Binary file with Text/ASCII type
+
+login user1 us1
+Ls
+LLS
+Active
+Text
+PUT tests/test_items/image.jpg cube.jpg
+Image
+PUT tests/test_items/image.jpg cube.jpg
+Text
+GET cube.jpg tests/test_items/cube.jpg
+ls
+lcd tests/test_items/
+lls
+QUIT

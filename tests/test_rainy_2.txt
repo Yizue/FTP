@@ -1,0 +1,21 @@
+# Rainy Day Scenario 2: Test user being locked from too many unsuccessful login attempts
+# As well as test not being able to use commands that require being logged in
+
+login user1 1
+login user1 2
+login user1 3
+login user1 4
+login user1 5
+PWD
+LS
+CD
+CDup
+MKDIR file4
+RENAME file4 file5
+RMDIR file5
+del rfc959.txt
+TEXT
+IMAGE
+PUT tests/test_items/image.jpg cube.jpg
+GET cube.jpg tests/test_items/cube.jpg
+QUIT

@@ -1,0 +1,20 @@
+# Allows testing with I/O redirection of stdin, uses Sunny Scenario 1
+-host 127.0.0.1 -u user1 -w us1 -A -ALL
+LLS
+PWD
+LS
+CD file1
+CDUP
+Image
+PUT tests/test_items/image.jpg cube.jpg
+GET cube.jpg tests/test_items/cube.jpg
+lcd tests/test_items/
+lls
+lcd ..
+lcd ..
+MKDIR file4
+rename file4 file5
+rmdir file5
+MKDIR file6
+noOP
+QUIT

@@ -1,0 +1,94 @@
+Beginning FTP Client Session
+
+Attempting to connect to FTP Server host: 127.0.0.1
+FTP Socket:
+<socket.socket fd=384, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 52919), raddr=('127.0.0.1', 2040)>
+	Server Response:
+	220 Service ready
+Beginning Test Case: C:\Users\Yizue\Desktop\FTP\tests\test_sunny_1.txt
+
+Input: login user1 us1
+
+	Server Response:
+	331 user1 accepted, need password
+	230 Password ok, user1 logged in
+Input: ?
+
+	Client Response: Successfully displayed <?>
+Input: LLS
+
+	Client Response: Successfully displayed "C:\Users\Yizue\Desktop\FTP"
+Input: PWD
+
+	Server Response:
+	257 "ftpserver\ftproot\user1\"
+Input: LS
+
+	Server Response:
+	200 PORT command OK
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+Input: CD file1
+
+	Server Response:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+Input: CDUP
+
+	Server Response:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+Input: Image
+
+	Server Response:
+	200 File Transfer set to Image
+Input: Active
+
+	Client Response: Set Data Connections to Active Mode
+Input: PUT tests/test_items/image.jpg cube.jpg
+
+	Server Response:
+	200 PORT command OK
+	226 cube.jpg was successfully transmitted
+Input: GET cube.jpg tests/test_items/cube.jpg
+
+	Server Response:
+	200 PORT command OK
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+Input: lcd tests/test_items/
+
+	Client Response: New directory: "C:\Users\Yizue\Desktop\FTP\tests\test_items"
+Input: lls
+
+	Client Response: Successfully displayed "C:\Users\Yizue\Desktop\FTP\tests\test_items"
+Input: lcd ..
+
+	Client Response: New directory: "C:\Users\Yizue\Desktop\FTP\tests"
+Input: lcd ..
+
+	Client Response: New directory: "C:\Users\Yizue\Desktop\FTP"
+Input: MKDIR file4
+
+	Server Response:
+	257 "ftpserver\ftproot\user1\file4" has been created
+Input: rename file4 file5
+
+	Server Response:
+	350 file4 exists, send new name for file
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+Input: rmdir file5
+
+	Server Response:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+Input: MKDIR file6
+
+	Server Response:
+	502 "ftpserver\ftproot\user1\file6" already exists
+Input: noOP
+
+	Server Response:
+	200 NOOP Command OK
+Input: QUIT
+	Server Response:
+	221 Server closing connection
+
+Ending FTP Client Session

@@ -1,0 +1,24 @@
+# Sunny Day Scenario 1: Tests sending and retrieval of image file in Active mode and Image type
+# as well as manipulating directories, the ? command and NOOP
+
+login user1 us1
+?
+LLS
+PWD
+LS
+CD file1
+CDUP
+Image
+Active
+PUT tests/test_items/image.jpg cube.jpg
+GET cube.jpg tests/test_items/cube.jpg
+lcd tests/test_items/
+lls
+lcd ..
+lcd ..
+MKDIR file4
+rename file4 file5
+rmdir file5
+MKDIR file6
+noOP
+QUIT

@@ -1,0 +1,19 @@
+# Sunny Day Scenario 2: Tests sending and retrieval of text file in Passive mode and ASCII type
+# as well as the HELP, APPEND, and DELETE commands
+
+login user1 us1
+HELP PWD
+HELP LIST
+LLS
+LS
+CD file1
+CDUP
+TEXT
+PASSIVE
+PUT tests/test_items/ascii.txt a.txt
+APPEND tests/test_items/ascii.txt a.txt
+GET a.txt tests/test_items/a.txt
+lcd tests/test_items/
+Delete a.txt
+lls
+QUIT

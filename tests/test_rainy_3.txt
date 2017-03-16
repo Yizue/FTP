@@ -1,0 +1,36 @@
+# Rainy Day Scenario 3: Test Missing parameters, too many parameters, invalid parameters
+
+login user1 us1 us2
+login user1 us1
+login user1 us1
+cd file1 file2
+MKDIR
+RENAME
+RMDIR
+MKDIR file4 file5
+RENAME file4 file5 file6
+RMDIR file5 file6
+put
+get
+append
+PUT tests/test_items/rfc959.txt rfc.txt rfc.txt
+GET rfc.txt tests/test_items/r.txt rfc.txt
+append tests/test_items/rfc959.txt
+append tests/test_items/rfc959.txt rfc.txt rfc.txt
+Delete
+delete rfc.txt rfc.txt
+lls tests/test_items tests/test_items
+lcd tests/test_items tests/test_items
+
+cd file8
+mkdir file7/file9
+rename file1/file2 file2/file3
+rmdir file8
+PUT not_real.txt
+GET not_real.txt
+append not_real_1.txt not_real_2.txt
+delete not_real.txt
+lls file1
+lcd file1
+
+quit quit

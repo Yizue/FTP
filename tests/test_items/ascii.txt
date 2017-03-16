@@ -1,0 +1,1 @@
+This is an ASCII file.\nTesting text mode transfer.

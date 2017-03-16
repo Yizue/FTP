@@ -1,0 +1,492 @@
+Starting the FTP Server
+The FTP Server is ready
+	To ('127.0.0.1', 52864), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52864) ***
+From ('127.0.0.1', 52864): ['QUIT']
+	To ('127.0.0.1', 52864), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52864) ***
+	To ('127.0.0.1', 52865), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52865) ***
+From ('127.0.0.1', 52865): ['PWD']
+	To ('127.0.0.1', 52865), send:
+	550 Not logged in
+From ('127.0.0.1', 52865): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['LIST']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['CWD', 'file1']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['CDUP']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['TYPE', 'I']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['MKD', 'file4']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['RNFR', 'file4']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['RMD', 'file5']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['MKD', 'file6']
+	To ('127.0.0.1', 52865), send:
+	530 Not logged in
+From ('127.0.0.1', 52865): ['NOOP']
+	To ('127.0.0.1', 52865), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52865): ['QUIT']
+	To ('127.0.0.1', 52865), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52865) ***
+	To ('127.0.0.1', 52868), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52868) ***
+From ('127.0.0.1', 52868): ['USER', 'user1']
+	To ('127.0.0.1', 52868), send:
+	331 user1 accepted, need password
+From ('127.0.0.1', 52868): ['PASS', 'us1']
+	To ('127.0.0.1', 52868), send:
+	230 Password ok, user1 logged in
+From ('127.0.0.1', 52868): ['PWD']
+	To ('127.0.0.1', 52868), send:
+	257 "ftpserver\ftproot\user1\"
+From ('127.0.0.1', 52868): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52868), send:
+	200 PORT command OK
+From ('127.0.0.1', 52868): ['LIST']
+	To ('127.0.0.1', 52868), send:
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+From ('127.0.0.1', 52868): ['CWD', 'file1']
+	To ('127.0.0.1', 52868), send:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+From ('127.0.0.1', 52868): ['CDUP']
+	To ('127.0.0.1', 52868), send:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+From ('127.0.0.1', 52868): ['TYPE', 'I']
+	To ('127.0.0.1', 52868), send:
+	200 File Transfer set to Image
+From ('127.0.0.1', 52868): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52868), send:
+	200 PORT command OK
+From ('127.0.0.1', 52868): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52868), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52868): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52868), send:
+	200 PORT command OK
+From ('127.0.0.1', 52868): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52868), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52868): ['MKD', 'file4']
+	To ('127.0.0.1', 52868), send:
+	257 "ftpserver\ftproot\user1\file4" has been created
+From ('127.0.0.1', 52868): ['RNFR', 'file4']
+	To ('127.0.0.1', 52868), send:
+	350 file4 exists, send new name for file
+From ('127.0.0.1', 52868): ['RNTO', 'file5']
+	To ('127.0.0.1', 52868), send:
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+From ('127.0.0.1', 52868): ['RMD', 'file5']
+	To ('127.0.0.1', 52868), send:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+From ('127.0.0.1', 52868): ['MKD', 'file6']
+	To ('127.0.0.1', 52868), send:
+	257 "ftpserver\ftproot\user1\file6" has been created
+From ('127.0.0.1', 52868): ['NOOP']
+	To ('127.0.0.1', 52868), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52868): ['QUIT']
+	To ('127.0.0.1', 52868), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52868) ***
+	To ('127.0.0.1', 52872), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52872) ***
+From ('127.0.0.1', 52872): ['PWD']
+	To ('127.0.0.1', 52872), send:
+	550 Not logged in
+From ('127.0.0.1', 52872): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['LIST']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['CWD', 'file1']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['CDUP']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['TYPE', 'I']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['MKD', 'file4']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['RNFR', 'file4']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['RMD', 'file5']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['MKD', 'file6']
+	To ('127.0.0.1', 52872), send:
+	530 Not logged in
+From ('127.0.0.1', 52872): ['NOOP']
+	To ('127.0.0.1', 52872), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52872): ['QUIT']
+	To ('127.0.0.1', 52872), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52872) ***
+	To ('127.0.0.1', 52885), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52885) ***
+From ('127.0.0.1', 52885): ['USER', 'user1']
+	To ('127.0.0.1', 52885), send:
+	331 user1 accepted, need password
+From ('127.0.0.1', 52885): ['PASS', 'us1']
+	To ('127.0.0.1', 52885), send:
+	230 Password ok, user1 logged in
+From ('127.0.0.1', 52885): ['PWD']
+	To ('127.0.0.1', 52885), send:
+	257 "ftpserver\ftproot\user1\"
+From ('127.0.0.1', 52885): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52885), send:
+	200 PORT command OK
+From ('127.0.0.1', 52885): ['LIST']
+	To ('127.0.0.1', 52885), send:
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+From ('127.0.0.1', 52885): ['CWD', 'file1']
+	To ('127.0.0.1', 52885), send:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+From ('127.0.0.1', 52885): ['CDUP']
+	To ('127.0.0.1', 52885), send:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+From ('127.0.0.1', 52885): ['TYPE', 'I']
+	To ('127.0.0.1', 52885), send:
+	200 File Transfer set to Image
+From ('127.0.0.1', 52885): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52885), send:
+	200 PORT command OK
+From ('127.0.0.1', 52885): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52885), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52885): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52885), send:
+	200 PORT command OK
+From ('127.0.0.1', 52885): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52885), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52885): ['MKD', 'file4']
+	To ('127.0.0.1', 52885), send:
+	257 "ftpserver\ftproot\user1\file4" has been created
+From ('127.0.0.1', 52885): ['RNFR', 'file4']
+	To ('127.0.0.1', 52885), send:
+	350 file4 exists, send new name for file
+From ('127.0.0.1', 52885): ['RNTO', 'file5']
+	To ('127.0.0.1', 52885), send:
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+From ('127.0.0.1', 52885): ['RMD', 'file5']
+	To ('127.0.0.1', 52885), send:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+From ('127.0.0.1', 52885): ['MKD', 'file6']
+	To ('127.0.0.1', 52885), send:
+	502 "ftpserver\ftproot\user1\file6" already exists
+From ('127.0.0.1', 52885): ['NOOP']
+	To ('127.0.0.1', 52885), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52885): ['QUIT']
+	To ('127.0.0.1', 52885), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52885) ***
+	To ('127.0.0.1', 52896), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52896) ***
+From ('127.0.0.1', 52896): ['USER', 'user1']
+	To ('127.0.0.1', 52896), send:
+	331 user1 accepted, need password
+From ('127.0.0.1', 52896): ['PASS', 'us1']
+	To ('127.0.0.1', 52896), send:
+	230 Password ok, user1 logged in
+From ('127.0.0.1', 52896): ['PWD']
+	To ('127.0.0.1', 52896), send:
+	257 "ftpserver\ftproot\user1\"
+From ('127.0.0.1', 52896): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52896), send:
+	200 PORT command OK
+From ('127.0.0.1', 52896): ['LIST']
+	To ('127.0.0.1', 52896), send:
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+From ('127.0.0.1', 52896): ['CWD', 'file1']
+	To ('127.0.0.1', 52896), send:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+From ('127.0.0.1', 52896): ['CDUP']
+	To ('127.0.0.1', 52896), send:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+From ('127.0.0.1', 52896): ['TYPE', 'I']
+	To ('127.0.0.1', 52896), send:
+	200 File Transfer set to Image
+From ('127.0.0.1', 52896): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52896), send:
+	200 PORT command OK
+From ('127.0.0.1', 52896): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52896), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52896): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52896), send:
+	200 PORT command OK
+From ('127.0.0.1', 52896): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52896), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52896): ['MKD', 'file4']
+	To ('127.0.0.1', 52896), send:
+	257 "ftpserver\ftproot\user1\file4" has been created
+From ('127.0.0.1', 52896): ['RNFR', 'file4']
+	To ('127.0.0.1', 52896), send:
+	350 file4 exists, send new name for file
+From ('127.0.0.1', 52896): ['RNTO', 'file5']
+	To ('127.0.0.1', 52896), send:
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+From ('127.0.0.1', 52896): ['RMD', 'file5']
+	To ('127.0.0.1', 52896), send:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+From ('127.0.0.1', 52896): ['MKD', 'file6']
+	To ('127.0.0.1', 52896), send:
+	502 "ftpserver\ftproot\user1\file6" already exists
+From ('127.0.0.1', 52896): ['NOOP']
+	To ('127.0.0.1', 52896), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52896): ['QUIT']
+	To ('127.0.0.1', 52896), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52896) ***
+	To ('127.0.0.1', 52913), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52913) ***
+From ('127.0.0.1', 52913): ['PWD']
+	To ('127.0.0.1', 52913), send:
+	550 Not logged in
+From ('127.0.0.1', 52913): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['LIST']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['CWD', 'file1']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['CDUP']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['TYPE', 'I']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['MKD', 'file4']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['RNFR', 'file4']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['RMD', 'file5']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['MKD', 'file6']
+	To ('127.0.0.1', 52913), send:
+	530 Not logged in
+From ('127.0.0.1', 52913): ['NOOP']
+	To ('127.0.0.1', 52913), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52913): ['QUIT']
+	To ('127.0.0.1', 52913), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52913) ***
+	To ('127.0.0.1', 52914), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52914) ***
+From ('127.0.0.1', 52914): ['QUIT']
+	To ('127.0.0.1', 52914), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52914) ***
+	To ('127.0.0.1', 52915), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52915) ***
+From ('127.0.0.1', 52915): ['USER', 'user1']
+	To ('127.0.0.1', 52915), send:
+	331 user1 accepted, need password
+From ('127.0.0.1', 52915): ['PASS', 'us1']
+	To ('127.0.0.1', 52915), send:
+	230 Password ok, user1 logged in
+From ('127.0.0.1', 52915): ['PWD']
+	To ('127.0.0.1', 52915), send:
+	257 "ftpserver\ftproot\user1\"
+From ('127.0.0.1', 52915): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52915), send:
+	200 PORT command OK
+From ('127.0.0.1', 52915): ['LIST']
+	To ('127.0.0.1', 52915), send:
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+From ('127.0.0.1', 52915): ['CWD', 'file1']
+	To ('127.0.0.1', 52915), send:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+From ('127.0.0.1', 52915): ['CDUP']
+	To ('127.0.0.1', 52915), send:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+From ('127.0.0.1', 52915): ['TYPE', 'I']
+	To ('127.0.0.1', 52915), send:
+	200 File Transfer set to Image
+From ('127.0.0.1', 52915): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52915), send:
+	200 PORT command OK
+From ('127.0.0.1', 52915): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52915), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52915): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52915), send:
+	200 PORT command OK
+From ('127.0.0.1', 52915): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52915), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52915): ['MKD', 'file4']
+	To ('127.0.0.1', 52915), send:
+	257 "ftpserver\ftproot\user1\file4" has been created
+From ('127.0.0.1', 52915): ['RNFR', 'file4']
+	To ('127.0.0.1', 52915), send:
+	350 file4 exists, send new name for file
+From ('127.0.0.1', 52915): ['RNTO', 'file5']
+	To ('127.0.0.1', 52915), send:
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+From ('127.0.0.1', 52915): ['RMD', 'file5']
+	To ('127.0.0.1', 52915), send:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+From ('127.0.0.1', 52915): ['MKD', 'file6']
+	To ('127.0.0.1', 52915), send:
+	502 "ftpserver\ftproot\user1\file6" already exists
+From ('127.0.0.1', 52915): ['NOOP']
+	To ('127.0.0.1', 52915), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52915): ['QUIT']
+	To ('127.0.0.1', 52915), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52915) ***
+	To ('127.0.0.1', 52919), send:
+	220 Service ready
+*** Thread client entering now for: ('127.0.0.1', 52919) ***
+From ('127.0.0.1', 52919): ['USER', 'user1']
+	To ('127.0.0.1', 52919), send:
+	331 user1 accepted, need password
+From ('127.0.0.1', 52919): ['PASS', 'us1']
+	To ('127.0.0.1', 52919), send:
+	230 Password ok, user1 logged in
+From ('127.0.0.1', 52919): ['PWD']
+	To ('127.0.0.1', 52919), send:
+	257 "ftpserver\ftproot\user1\"
+From ('127.0.0.1', 52919): ['PORT', '192,168,0,20,48,213']
+	To ('127.0.0.1', 52919), send:
+	200 PORT command OK
+From ('127.0.0.1', 52919): ['LIST']
+	To ('127.0.0.1', 52919), send:
+	150 Ready to send information for "ftpserver\ftproot\user1"
+	226 Information on "ftpserver\ftproot\user1" successfully transmitted
+From ('127.0.0.1', 52919): ['CWD', 'file1']
+	To ('127.0.0.1', 52919), send:
+	250 Changed directory: "ftpserver\ftproot\user1\file1"
+From ('127.0.0.1', 52919): ['CDUP']
+	To ('127.0.0.1', 52919), send:
+	200 Changed Directory: "ftpserver\ftproot\user1"
+From ('127.0.0.1', 52919): ['TYPE', 'I']
+	To ('127.0.0.1', 52919), send:
+	200 File Transfer set to Image
+From ('127.0.0.1', 52919): ['PORT', '192,168,0,20,48,214']
+	To ('127.0.0.1', 52919), send:
+	200 PORT command OK
+From ('127.0.0.1', 52919): ['STOR', 'cube.jpg']
+	To ('127.0.0.1', 52919), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52919): ['PORT', '192,168,0,20,48,215']
+	To ('127.0.0.1', 52919), send:
+	200 PORT command OK
+From ('127.0.0.1', 52919): ['RETR', 'cube.jpg']
+	To ('127.0.0.1', 52919), send:
+	150 File status ok, ready to transfer cube.jpg
+	226 cube.jpg was successfully transmitted
+From ('127.0.0.1', 52919): ['MKD', 'file4']
+	To ('127.0.0.1', 52919), send:
+	257 "ftpserver\ftproot\user1\file4" has been created
+From ('127.0.0.1', 52919): ['RNFR', 'file4']
+	To ('127.0.0.1', 52919), send:
+	350 file4 exists, send new name for file
+From ('127.0.0.1', 52919): ['RNTO', 'file5']
+	To ('127.0.0.1', 52919), send:
+	250 "ftpserver\ftproot\user1\file4" successfully renamed to "ftpserver\ftproot\user1\file5"
+From ('127.0.0.1', 52919): ['RMD', 'file5']
+	To ('127.0.0.1', 52919), send:
+	250 "ftpserver\ftproot\user1\file5" has been successfully removed
+From ('127.0.0.1', 52919): ['MKD', 'file6']
+	To ('127.0.0.1', 52919), send:
+	502 "ftpserver\ftproot\user1\file6" already exists
+From ('127.0.0.1', 52919): ['NOOP']
+	To ('127.0.0.1', 52919), send:
+	200 NOOP Command OK
+From ('127.0.0.1', 52919): ['QUIT']
+	To ('127.0.0.1', 52919), send:
+	221 Server closing connection
+*** Thread closed for: ('127.0.0.1', 52919) ***
